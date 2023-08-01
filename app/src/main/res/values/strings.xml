@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">exchangesrate</string>
+    <string name="popular_screen_title">Populars</string>
+    <string name="favorite_screen_title">Favorites</string>
+    <string name="currency_selection">Currency selection</string>
+    <string name="sort_by">Sort by</string>
 </resources>
