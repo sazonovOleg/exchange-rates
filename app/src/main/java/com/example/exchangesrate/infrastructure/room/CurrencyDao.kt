@@ -8,7 +8,7 @@ interface CurrencyDao {
     suspend fun addToData(currencyData: CurrencyData)
 
     @Query("SELECT * FROM ex_change_rate_db")
-    fun getDataList(): List<CurrencyData>
+    suspend fun getDataList(): List<CurrencyData>
 
     @Update
     suspend fun updateData(currencyData: CurrencyData)

@@ -7,18 +7,9 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 @Database(entities = [CurrencyData::class], version = 1)
-@TypeConverters(CurrencyTypeConverter::class)
 abstract class CurrencyDatabase : RoomDatabase() {
     abstract fun currencyDao(): CurrencyDao
-}
 
-
-
-
-
-
-
-///
 //    companion object {
 //        @Volatile
 //        private var instance: CurrencyDatabase? = null
@@ -35,3 +26,4 @@ abstract class CurrencyDatabase : RoomDatabase() {
 //            ).build()
 //        }
 //    }
+}

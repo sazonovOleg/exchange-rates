@@ -8,16 +8,23 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.IconButton
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.exchangesrate.R
+import com.example.exchangesrate.ui.screens.main.MainActivityVM
+import kotlinx.coroutines.launch
 
 @Composable
 fun TabBody(
+    vm: MainActivityVM = viewModel(),
     iconOnClick: () -> Unit,
 ) {
     Column(
@@ -59,6 +66,9 @@ fun TabBody(
                 }
             )
         }
-        Spacer(modifier = Modifier.fillMaxWidth(1f).height(2.dp).background(Color(0xFFFF0000)))
+        Spacer(modifier = Modifier
+            .fillMaxWidth(1f)
+            .height(2.dp)
+            .background(Color(0xFFFF0000)))
     }
 }

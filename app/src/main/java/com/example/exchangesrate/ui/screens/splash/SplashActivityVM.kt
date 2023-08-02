@@ -6,7 +6,6 @@ import android.content.Intent
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.exchangesrate.infrastructure.repo.ApiServiceRepo
 import com.example.exchangesrate.infrastructure.repo.DataBaseRepo
 import com.example.exchangesrate.ui.screens.main.MainActivity
 import kotlinx.coroutines.launch
@@ -24,7 +23,7 @@ class SplashActivityVM(application: Application) : AndroidViewModel(application)
 
     private fun initDataBase() {
         viewModelScope.launch {
-            DataBaseRepo(getApplication()).createDataBase()
+
         }
     }
 

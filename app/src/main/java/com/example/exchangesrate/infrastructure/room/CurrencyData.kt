@@ -13,10 +13,9 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "ex_change_rate_db")
 data class CurrencyData(
     @PrimaryKey(autoGenerate = false)
-    var last_update_date: String,
-
-    var currencyType: MutableList<String>,
-    var currency: MutableList<String>,
+    var timestamp: String,
+    var date: String,
+    var rates: String
 )
 
 data class Rates(
